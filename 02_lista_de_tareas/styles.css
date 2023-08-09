@@ -1,0 +1,25 @@
+body {
+	box-sizing: border-box;
+	background-color: #222;
+	color: #fff;
+}
+
+body * {
+	margin: 0;
+	padding: 0;
+}
+
+.task_container {
+	max-width: 400px;
+}
+
+.task_container h1 {
+	text-align: center;
+}
+
+.task_form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 20px 0;
+}

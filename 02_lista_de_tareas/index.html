@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Lista de Tareas</title>
+		<link
+			rel="stylesheet"
+			href="styles.css" />
+	</head>
+
+	<body>
+		<form class="task_container">
+			<h1>Mis Tareas</h1>
+			<div class="task_form">
+				<label for="task-input">Ingresa el título de la tarea:</label>
+				<input
+					class="task_title"
+					id="task-input"
+					type="text"
+					placeholder="Nombre de la tarea" />
+				<textarea
+					class="task"
+					name="task-area"
+					id="task-area"
+					placeholder="Escribe la tarea aquí..."
+					cols="30"
+					rows="10"></textarea>
+
+				<button>Crear tarea</button>
+			</div>
+		</form>
+
+		<div
+			id="task_list"
+			class="tasks_list">
+			Tareas
+		</div>
+	</body>
+</html>
