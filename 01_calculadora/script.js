@@ -1,8 +1,8 @@
 const d = document;
 
-const $display = d.querySelector('.display');
-const $buttonsContainer = d.querySelector('.buttons');
-const $resetButton = d.querySelector('.reset-button');
+const $display = d.getElementById('display');
+const $buttons = d.getElementById('buttons');
+const $resetButton = d.getElementById('reset-button');
 
 let firstValue = '';
 let secondValue = '';
@@ -27,11 +27,12 @@ const buttonsValues = [
 	'+',
 ];
 
+// Funcion creadora de botones con eventos a handleButtonClick
 function createButton(val) {
 	const button = d.createElement('button');
 	button.textContent = val;
 	button.addEventListener('click', handleButtonClick);
-	$buttonsContainer.appendChild(button);
+	$buttons.appendChild(button);
 }
 
 function handleButtonClick(e) {
@@ -48,9 +49,14 @@ function handleButtonClick(e) {
 	} else if (val === '=') {
 		performOperation();
 	} else {
-		if (!operation) {
+		if (!operation && $display.value !== 'Syntax Error') {
+			$display.$display = false;
 			operation = val;
 			$display.value += val;
+		} else {
+			$display.value = 'Syntax Error';
+			$display.disabled = true;
+			console.log('Input desactivado');
 		}
 	}
 }
