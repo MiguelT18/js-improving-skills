@@ -1,3 +1,9 @@
+TODO:
+
+# Calculadora:
+
+-   FIXME: Arreglar el bug cuando el valor de display recibe como valores dos operadores.
+
 ## Proyectos a realizar:
 
 1. **Calculadora Simple**:
